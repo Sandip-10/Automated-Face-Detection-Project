@@ -3,7 +3,7 @@ import numpy as np
 from os import listdir
 from os.path import isfile, join
 
-data_path = 'C:/Users/User/Desktop/image/'
+data_path = 'E:\\WorksSpace\\Project\\facial_recognition_1\\Dateset\\'
 onlyfiles = [f for f in listdir(data_path) if isfile(join(data_path,f))]
 
 Training_Data, Labels = [], []
@@ -22,7 +22,7 @@ model.train(np.asarray(Training_Data), np.asarray(Labels))
 
 print("Dataset Model Training Complete!!!!!")
 
-face_classifier = cv2.CascadeClassifier('C:/Users/User/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier('E:\\WorksSpace\\Project\\facial_recognition_1\\haarcascade_frontalface_default.xml')
 
 def face_detector(img, size = 0.5):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -55,7 +55,7 @@ while True:
 
 
         if confidence > 82:
-            cv2.putText(image, "shibam", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
+            cv2.putText(image, "Sandip Karmakar", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
             cv2.imshow('Face Cropper', image)
 
         else:
