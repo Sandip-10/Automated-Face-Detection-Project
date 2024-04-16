@@ -5,7 +5,7 @@ from os import listdir
 from os.path import isfile, join
 
 # Set the path to the dataset
-data_path = 'E:\\WorksSpace\\Project\\facial_recognition_1\\Dateset\\'
+data_path = 'E:\\WorksSpace\\Project\\facial_recognition_1\\Dataset\\'
 
 # Get a list of all files in the dataset directory
 onlyfiles = [f for f in listdir(data_path) if isfile(join(data_path,f))]
